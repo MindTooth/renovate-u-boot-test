@@ -27,8 +27,7 @@
     },
     {
       "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)((?<prerelease>-)rc(?<build>\\d+))?$",
-      "matchPackageNames": ["MindTooth/u-boot"],
-      "branchPrefix": "fork"
+      "matchPackageNames": ["MindTooth/u-boot"]
     }
   ]
 }
