@@ -28,6 +28,12 @@
     {
       "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)((?<prerelease>-)rc(?<build>\\d+))?$",
       "matchPackageNames": ["MindTooth/u-boot"]
+    },
+    {
+      "versioning": "loose",
+      "matchPackageNames": ["MindTooth/u-boot"],
+      "matchFileNames": ["/README.rc/"],
+      "branchPrefix": "rc/"
     }
   ]
 }
