@@ -23,14 +23,9 @@
   "packageRules": [
     {
       "versioning": "loose",
-      "matchPackageNames": ["u-boot/u-boot"]
+      "matchPackageNames": ["u-boot/u-boot", "MindTooth/u-boot"]
     },
     {
-      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)((?<prerelease>-)rc(?<build>\\d+))?$",
-      "matchPackageNames": ["MindTooth/u-boot"]
-    },
-    {
-      "versioning": "loose",
       "matchPackageNames": ["MindTooth/u-boot"],
       "matchFileNames": ["/README.rc/"],
       "branchPrefix": "rc/"
