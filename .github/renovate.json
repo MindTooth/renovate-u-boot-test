@@ -27,6 +27,11 @@
     },
     {
       "matchPackageNames": ["MindTooth/u-boot"],
+      "matchFileNames": ["/README.md/"],
+      "ignoreUnstable": true
+    },
+    {
+      "matchPackageNames": ["MindTooth/u-boot"],
       "matchFileNames": ["/README.rc/"],
       "branchPrefix": "rc/"
     }
