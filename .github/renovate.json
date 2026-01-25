@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+
+  "extends": ["config:recommended", ":timezone(Europe/Berlin)"],
+
+  "enabledManagers": ["custom.regex"],
+
+  "customManagers": [
+    {
+      "customType": "regex",
+      "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}",
+      "managerFilePatterns": ["/README.md/"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>.*?)(?:\\s+extractVersion=(?<extractVersion>.+?))?(?:\\s+versioning=(?<versioning>.+?))?\\s+depName=(?<depName>.+?)?\\s(?:.*_(?:version|VERSION):\\s+(?<currentValue>.*))?(?:(\\s)?.*_(?:ref|REF):\\s+(?<currentDigest>.*))?"
+      ]
+    }
+  ],
+
+  "packageRules": [
+    {
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)((?<prerelease>-)rc(?<build>\\d+))?$",
+      "matchPackageNames": ["MindTooth/u-boot", "u-boot/u-boot"]
+    }
+  ]
+}

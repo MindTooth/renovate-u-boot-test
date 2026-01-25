@@ -1,0 +1,8 @@
+# renovate-u-boot-test
+
+Repositoring for debugging [u-boot](https://github.com/u-boot/u-boot) versioning.
+
+## Custom Regex
+
+# renovate: datasource=github-tags extractVersion=^v(?<version>.*)$ depName=u-boot/u-boot
+uboot_version: 2026.01-rc4
