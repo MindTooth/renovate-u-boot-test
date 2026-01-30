@@ -27,6 +27,7 @@
     },
     {
       "matchPackageNames": ["MindTooth/u-boot"],
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)((?<prerelease>-)rc(?<build>\\d+))?$",
       "matchFileNames": ["/README.md/"],
       "ignoreUnstable": true
     },
